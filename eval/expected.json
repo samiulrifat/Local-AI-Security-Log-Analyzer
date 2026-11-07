@@ -1,0 +1,115 @@
+{
+  "Cultive8_Workspace_Agrigen_Server.log": {
+    "attackers": {
+      "203.0.113.44": {
+        "must_mention": "compromise",
+        "severity": [
+          "Critical"
+        ],
+        "lines": [
+          5,
+          13,
+          23,
+          35,
+          50,
+          65,
+          80,
+          94,
+          108,
+          123,
+          153,
+          189,
+          196,
+          198,
+          201
+        ]
+      },
+      "203.0.113.72": {
+        "must_mention": "SQL",
+        "severity": [
+          "Medium",
+          "High"
+        ],
+        "lines": [
+          29,
+          30,
+          32,
+          222
+        ]
+      },
+      "203.0.113.90": {
+        "must_mention": "Scanning",
+        "severity": [
+          "Medium",
+          "High"
+        ],
+        "lines": [
+          54,
+          56,
+          58,
+          60,
+          62,
+          64,
+          67,
+          69,
+          99,
+          101,
+          102
+        ]
+      },
+      "203.0.113.155": {
+        "must_mention": "rate",
+        "severity": [
+          "Medium"
+        ],
+        "lines": []
+      },
+      "203.0.113.201": {
+        "must_mention": "Prompt injection",
+        "severity": [
+          "Low",
+          "Medium"
+        ],
+        "lines": []
+      }
+    },
+    "not_attackers": [
+      "192.0.2.10",
+      "198.51.100.96",
+      "198.51.100.91",
+      "198.51.100.88"
+    ]
+  },
+  "other_format.log": {
+    "attackers": {
+      "45.33.12.9": {
+        "must_mention": "compromise",
+        "severity": [
+          "High",
+          "Critical"
+        ],
+        "lines": []
+      },
+      "91.200.4.7": {
+        "must_mention": "SQL",
+        "severity": [
+          "Medium",
+          "High"
+        ],
+        "lines": []
+      },
+      "185.77.2.3": {
+        "must_mention": "Scanning",
+        "severity": [
+          "Medium",
+          "High"
+        ],
+        "lines": []
+      }
+    },
+    "not_attackers": [
+      "172.16.1.20",
+      "172.16.2.8"
+    ]
+  }
+}

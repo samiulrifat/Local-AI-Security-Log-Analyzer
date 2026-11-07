@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>logsift</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+  <a class="wordmark" href="#">logsift</a>
+  <div class="status" id="status">starting model</div>
+</header>
+
+<canvas id="strip" height="150"></canvas>
+<div class="strip-info" id="stripInfo"></div>
+
+<main>
+  <section id="home" hidden>
+    <label class="drop" id="drop">
+      <input class="file-input" type="file" id="file" accept=".log,.txt">
+      <span class="drop-title">Drag a log file here</span>
+      <span class="drop-button">Choose file</span>
+      <span class="drop-small">.log or .txt, up to 20 MB. Nothing leaves this machine.</span>
+    </label>
+    <p class="error" id="uploadError" hidden></p>
+    <div id="history"></div>
+  </section>
+
+  <section id="ready" hidden>
+    <h1 id="readyName"></h1>
+    <p class="muted" id="readySize"></p>
+    <div class="row">
+      <select id="model"></select>
+      <button id="startBtn">Analyze</button>
+    </div>
+  </section>
+
+  <section id="running" hidden>
+    <h1 class="huge" id="progressBig">0%</h1>
+    <p id="progressText"></p>
+    <div class="row">
+      <button class="quiet" id="cancelBtn">Cancel</button>
+      <button class="quiet" id="retryBtn" hidden>Retry unfinished parts</button>
+    </div>
+    <p class="error" id="runError" hidden></p>
+    <h2>Seen so far</h2>
+    <ul class="hits" id="hits"></ul>
+    <h2>Parts</h2>
+    <div id="parts"></div>
+  </section>
+
+  <section id="report" hidden>
+    <h1 class="huge" id="reportBig"></h1>
+    <p class="summary" id="reportSummary"></p>
+    <p class="error" id="coverage" hidden></p>
+    <button class="quiet" id="reportRetryBtn" hidden>Retry the unfinished parts</button>
+    <div id="findings"></div>
+    <h2>Checked, not attacks</h2>
+    <div id="reviewed"></div>
+    <h2>This run</h2>
+    <p class="mono muted" id="runStats"></p>
+    <div class="row">
+      <a class="quiet-link" id="download" download="report.json">Download report as JSON</a>
+    </div>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
